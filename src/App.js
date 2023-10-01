@@ -1,5 +1,11 @@
+import RepoResultsTable from "./Components/RepoResultsTable";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <RepoResultsTable />
+    </>
+  );
 }
 
 export default App;

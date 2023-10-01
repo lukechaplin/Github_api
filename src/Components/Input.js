@@ -1,7 +1,7 @@
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 
-export default function BasicTextFields() {
+export default function BasicTextField() {
   return (
     <Box
       component="form"

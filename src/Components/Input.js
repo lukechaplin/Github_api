@@ -1,3 +1,4 @@
+import * as React from "react";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 
@@ -11,7 +12,11 @@ export default function BasicTextField() {
       noValidate
       autoComplete="off"
     >
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+      <TextField
+        id="outlined-basic"
+        label="Enter github username here"
+        variant="outlined"
+      />
     </Box>
   );
 }

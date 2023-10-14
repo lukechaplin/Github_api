@@ -1,8 +1,8 @@
-import * as React from "react";
+import React from "react";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 
-export default function BasicTextField() {
+export default function BasicTextField({ eventHandler }) {
   return (
     <Box
       component="form"
@@ -13,6 +13,7 @@ export default function BasicTextField() {
       autoComplete="off"
     >
       <TextField
+        onChange={eventHandler}
         id="outlined-basic"
         label="Enter github username here"
         variant="outlined"

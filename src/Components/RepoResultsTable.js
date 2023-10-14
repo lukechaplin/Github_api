@@ -1,22 +1,17 @@
-import * as React from "react";
+import React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import DetailsDialog from "./Dialog";
-import { request } from "@octokit/request";
-import BasicTextField from "./Input";
 
-const result = await request("GET /users/lukechaplin/repos");
-let resultData = result.data;
-
-export default function RepoResultsTable() {
-  const rows = resultData.map((repo) => ({
-    id: repo.id,
-    Repository: repo.name,
-    Author: repo.owner.login,
-    URL: repo.html_url,
-    Forks: repo.forks_count,
-    Likes: repo.watchers,
-    Stars: repo.stargazers_count,
-    Issue: repo.open_issues_count,
+export default function RepoResultsTable({ state }) {
+  const rows = state.map((row) => ({
+    id: row.id,
+    Repository: row.name,
+    Author: row.owner.login,
+    URL: row.html_url,
+    Forks: row.forks_count,
+    Likes: row.watchers,
+    Stars: row.stargazers_count,
+    Issue: row.open_issues_count,
   }));
 
   const columns = [
@@ -41,11 +36,9 @@ export default function RepoResultsTable() {
       },
     },
   ];
-
   return (
     <>
       {" "}
-      <BasicTextField />
       <div style={{ height: 300, width: "100%" }}>
         <DataGrid columns={columns} rows={rows} />
       </div>

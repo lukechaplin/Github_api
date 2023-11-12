@@ -1,4 +1,5 @@
 import React from "react";
+import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
 import DetailsDialog from "./Dialog";
 
@@ -39,9 +40,9 @@ export default function RepoResultsTable({ state }) {
   return (
     <>
       {" "}
-      <div style={{ height: 300, width: "100%" }}>
+      <Box sx={{ mx: "auto", p: 10 }}>
         <DataGrid columns={columns} rows={rows} />
-      </div>
+      </Box>
     </>
   );
 }

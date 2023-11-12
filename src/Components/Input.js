@@ -6,9 +6,7 @@ export default function BasicTextField({ eventHandler }) {
   return (
     <Box
       component="form"
-      sx={{
-        "& > :not(style)": { m: 1, width: "25ch" },
-      }}
+      sx={{ mx: "auto", width: 200, p: 2 }}
       noValidate
       autoComplete="off"
     >
